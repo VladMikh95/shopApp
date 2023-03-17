@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.views.MainPageFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainPageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_base_menu_24">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--<com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_header_main"
+                app:menu="@menu/activity_main_drawer" />-->
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/page_main_toolbar_title"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginEnd="47dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/myCardView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    >
+                    <ImageView
+                        android:id="@+id/toolBarProfile"
+                        android:contentDescription="My profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@drawable/edit_text"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextLookingFor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:hint="@string/edit_text_main_page_looking_for"
+            android:textColor="@color/text_color_main_page"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageViewLokingFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:contentDescription="@string/button_search"
+            android:src="@drawable/ic_baseline_search_24"/>
+
+
+    </LinearLayout>
+
+    <!-- Кнопки сортировка по категориям -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPhones"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutHeadphones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonPhones"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/phones"
+                android:src="@drawable/button_phone" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/phones" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHeadphones"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutGames"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutPhones"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonHeadPhones"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/headphones"
+                android:src="@drawable/button_headphones" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/headphones" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGames"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutCars"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutHeadphones"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonGames"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/games"
+                android:src="@drawable/button_games" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/games" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCars"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutFurniture"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutGames"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonCars"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/cars"
+                android:src="@drawable/button_cars" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/cars" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFurniture"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutKids"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutCars"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonFurniture"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/furniture"
+                android:src="@drawable/button_furniture" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/furniture" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKids"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutFurniture"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/buttonKids"
+                style="@style/MainPageOvalButton"
+                android:contentDescription="@string/kids"
+                android:src="@drawable/button_kids" />
+
+            <TextView
+                style="@style/TextViewButton"
+                android:layout_height="wrap_content"
+                android:text="@string/kids" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Блок последние товары-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewMainPageBlockTitle"
+            android:id="@+id/textViewBlockLatest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_page_latest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/ButtonMainPageBlockTitle"
+            android:id="@+id/buttonBlockLatest"
+            android:text="@string/button_view_all"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLatestProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/textViewBlockLatest"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Блок товары на скидках-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewMainPageBlockTitle"
+            android:id="@+id/textViewBlockFlashSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_page_flash_sale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/ButtonMainPageBlockTitle"
+            android:id="@+id/buttonBlockFlashSale"
+            android:text="@string/button_view_all"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProductsOnDiscont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/textViewBlockFlashSale"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background">#FFCDCBC7</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +8,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#FFE8E8E8</color>
+    <color name="edit_text_color">#FF7B7B7B</color>
+    <color name="text_title">#FF161826</color>
+    <color name="button_color">#FF4E55D7</color>
+    <color name="button_text_color">#FFEAEAEA</color>
+    <color name="text_color_grey">#FF808080</color>
+    <color name="text_color_link">#FF254FE6</color>
+    <color name="text_color_main_page_title">#FF4E55D7</color>
+    <color name="very_light_grey">#FFF5F6F6</color>
+    <color name="text_color_main_page">#FF5B5B5B</color>
+    <color name="button_oval">#FFEEEFF4</color>
+    <color name="button_image">#FF161826</color>
+    <color name="text_button_color">#FFA6A7AB</color>
+    <color name="text_block">#FF040402</color>
+    <color name="category">#FFC4C4C4</color>
+    <color name="sale">#FFF93A3A</color>
 </resources>
